@@ -1,4 +1,3 @@
-
 // Common datatypes
 // const str = "string"; // string 
 // const num = 3; // number
@@ -11,8 +10,8 @@
 // const obj = {"Name" : "Martin", "Profession":"Automation engineer" }
 // const arr = ["Zero", "one", "Two"];
 
-// "use strict"
 
+// Defining a class 
 class MyClassName {
     setName(name){
         this.name = name;
@@ -25,9 +24,22 @@ class MyClassName {
     }
 }
 
+
+// Create object with my class
 const thing = new MyClassName()
+
+// Calling the class and class methods
 thing.setName("Douggie")
 thing.speak();
+
+// Create new instance of the class
+const noname = new MyClassName()
+
+// Calling new instance, will speak as John Doggo since no name defined. ;-)
+noname.speak();
+
+
+
 
 
 

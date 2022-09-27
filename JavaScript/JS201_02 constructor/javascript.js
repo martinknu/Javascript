@@ -13,6 +13,10 @@
 
 // "use strict"
 
+
+// Here the class is using a constructor to initialize the object when created
+// A constructor is a special function that creates and initializes an object instance of a class. In JavaScript, a constructor gets called when an object is created using the new keyword. The purpose of a constructor is to create a new object and set values for any existing object properties.
+
 class MyClassName {
     constructor(name, age){
         this.name = name;
@@ -34,10 +38,12 @@ class MyClassName {
 
 }
 
+// Here I am adding name and age to my object via constructor
 const thing = new MyClassName("Douggirr", 10)
 
 thing.speak();
 
+// Here the object is renamed, the new speak function is with the new name
 thing.setName("Marint");
 thing.speak();
 
