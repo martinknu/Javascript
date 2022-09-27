@@ -13,22 +13,23 @@
 
 // "use strict"
 
+
 // JSON Javascript Object Notation, language independent
 // Self describing and easy to understand.
 // JSON is a javascript object
-
+// Here an object is defined 
 const object = {
-    "name": "Maritn",
-    "favfoods": ["Pizza", "Bacon", "Cheese"],
+    "name": "Martin",
+    "favfoods": ["Steak", "Cheddar", "Red wine"],
     "age": 41,
     "Children": [
         {
             "name": "Lem",
-            "age": 10,
+            "age": 11,
         },
         {
             "name": "Moe",
-            "age": 42,
+            "age": 12,
         },
     ]
 }
@@ -37,21 +38,3 @@ const object = {
 // AJAX Asyncronous Javascript and XML
 // Simplest way to send data from a server and get data from a server.
 // It is super light weight
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

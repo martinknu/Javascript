@@ -14,18 +14,14 @@
 
 "use strict" // With strict mode, you can not, for example, use undeclared variables.
 
-
-// Random number generator
-const maxValue = 10;
-let randomNumber = Math.floor(Math.random()* maxValue);
-// console.log(`The number is ${randomNumber}`);
-while(true){
-    let guessedNumber = Number(prompt(`The number is between 0 - ${maxValue}, What is your guess?`));
-        if(guessedNumber === randomNumber){
-            break;
-        }
-        console.log("You guessed wrong, try again !!")
+// Calling a function that does not exist will result in an error
+try{
+    functionthatdoesnotexist();
+ 
+} catch(error) {
+    console.warn(`The error is : ` , error);
+} finally{
+    // Do something here
 }
-console.log("Good job you guessed right !!")
-console.log(`The number was ${randomNumber}`);
+
 
