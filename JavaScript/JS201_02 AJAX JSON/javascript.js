@@ -10,6 +10,7 @@ const divHomeworld = document.getElementById("homeworld");
 const divPictures = document.getElementById("pictures");
 
 
+// Event listener for button
 document.getElementById("changePerson").addEventListener("click", 
 function(){ 
 
