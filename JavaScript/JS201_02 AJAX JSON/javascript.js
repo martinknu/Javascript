@@ -13,7 +13,6 @@ const divPictures = document.getElementById("pictures");
 // Event listener for button
 document.getElementById("changePerson").addEventListener("click", 
 function(){ 
-
     const randomNum = Math.ceil(Math.random() * 83);
     // Query string
     const queryString = `https://swapi.dev/api/people/${randomNum}/`   
