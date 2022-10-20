@@ -1,25 +1,37 @@
 
-// Common datatypes
-const str = "string"; // string 
-const num = 3; // number
-const flt = 3.14; // Float
+// Primitive datatypes
+const num = 3; // number used for all number values (integer and floating point) except for very big integers.
+const flt = 3.14; // Float is also a number
+const bigInteger = BigInt(Number.MAX_SAFE_INTEGER); // A BigInt is created by appending n to the end of an integer e.g. 9007199254740993n
+const str = "string"; // string please note that the length of the string is not always the number of char it contains since some characters take up two elements
 const bol = true; // Bolean
-const list = ["item1", 2 , 3, 3.14 ]; // Array
 const thing = null; // has nothing
 const notDefined = undefined;
+
+// Object types
+const list = ["item1", 2 , 3, 3.14 ]; // Array
+const arr = ["Zero", "one", "Two"];
 const getAge = function() {return 41};
 const obj = {"Name" : "Martin", "Profession":"Automation engineer" }
-const arr = ["Zero", "one", "Two"];
+const startTime = Date.now(); 
 
 const twitter = "@MartinTheMan";
-var strMystring = "Martin";
-var strWebsite = "Menuhjaelp.dk"
-var myAge = 'My age is 41';
-var age = 0;
-var strWork = "";
+let strMystring = "Martin";
+let strWebsite = "Menuhjaelp.dk"
+let myAge = 'My age is 41';
+let age = 0;
+let strWork = "";
+
+
+
 
 console.log("page sucessfully loaded scrip {}");
 console.log(strWebsite);
+
+
+let newTime = new Date(startTime).toLocaleDateString("en-US");
+console.log(newTime);
+
 
 /*
 Multi 
