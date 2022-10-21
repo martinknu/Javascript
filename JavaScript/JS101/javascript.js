@@ -1,3 +1,10 @@
+// Single line comment
+
+/*
+Multi 
+line 
+commment
+*/
 
 // Primitive datatypes
 const num = 3; // number used for all number values (integer and floating point) except for very big integers.
@@ -23,8 +30,6 @@ let age = 0;
 let strWork = "";
 
 
-
-
 console.log("page sucessfully loaded scrip {}");
 console.log(strWebsite);
 
@@ -32,12 +37,6 @@ console.log(strWebsite);
 let newTime = new Date(startTime).toLocaleDateString("en-US");
 console.log(newTime);
 
-
-/*
-Multi 
-line 
-commment
-*/
 
 // Conditional IF
 if (strMystring == "Martin") {
