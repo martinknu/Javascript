@@ -18,6 +18,19 @@ console.log("includes Za:" + myCar.includes("Za"));
 console.log("includes za:" + myCar.includes("za"));
 
 
+for (let key in myCar) {
+    console.log(key.key);
+}
+
+console.log(Object.getOwnPropertyNames(String));
+
+let strMethods = Object.getOwnPropertyNames(String);
+
+let methodNames = strMethods.__proto__;
+
+methodNames.forEach(item => console.log(item));
+
+
 
 
 // Function insertafter
