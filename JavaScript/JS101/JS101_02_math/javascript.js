@@ -10,31 +10,50 @@ Purpose: Examples of javascript math
 
 let x = 0;
 let y = 0;
+let z = [0,1,2,3,4,5,6,7,8,9];
+
+// Math constants
+console.log("Math.E: " + Math.E);        // returns Euler's number
+console.log("Math.PI: " + Math.PI );      // returns PI
+console.log("Math.SQRT2: " + Math.SQRT2 );   // returns the square root of 2
+console.log("Math.SQRT1_2: " + Math.SQRT1_2 ); // returns the square root of 1/2
+console.log("Math.LN2: " + Math.LN2 );     // returns the natural logarithm of 2
+console.log("Math.LN10: " + Math.LN10  );   // returns the natural logarithm of 10
+console.log("Math.LOG2E: " + Math.LOG2E );   // returns base 2 logarithm of E
+console.log("Math.LOG10E: " + Math.LOG10E );  // returns base 10 logarithm of E 
 
 
+// Rounding to integer
+x = 4.7;
+console.log("Math.round: " + Math.round(x));	//Returns x rounded to its nearest integer
+console.log("Math.ceil: " + Math.ceil(x));      //Returns x rounded up to its nearest integer
+console.log("Math.floor: " + Math.floor(x));	//Returns x rounded down to its nearest integer
+console.log("Math.trunc: " + Math.trunc(x));	//Returns the integer part of x (new in ES6)
 
-x = Math.PI;
-console.log(x);
 
-
+// max / min N.B: Spread operator ... must be used to spread array into its elements.
+console.log("Math.max: " + Math.max(...z));
+console.log("Math.min: " + Math.min(...z));
 
 
 function spirograph() {            
-    var canvas2 = document.getElementById("canvas2");
-    var context = canvas2.getContext("2d");
+    let  canvas2 = document.getElementById("canvas2");
+    let  context = canvas2.getContext("2d");
     
-    showAxes(context);
+    //showAxes(context);
     context.save();
-    // var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-    var step = 4;
-    for (var i = -4; i < canvas.height; i += step) {
+    // let  imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+    let  step = 1;
+    
+    for (let  i = 0; i < 1; i += step) { // canvas.height
         // context.putImageData(imageData, 0, 0);
         plotSine(context, i, 54 + i);
     }
+
 }
 
 function drawPoint(ctx, y) {            
-    var radius = 3;
+    let  radius = 3;
     ctx.beginPath();
 
     // Hold x constant at 4 so the point only moves up and down.
@@ -47,9 +66,9 @@ function drawPoint(ctx, y) {
 }
 
 function plotSine(ctx, xOffset, yOffset) {
-    var width = ctx.canvas.width;
-    var height = ctx.canvas.height;
-    var scale = 20;
+    let  width = ctx.canvas.width;
+    let  height = ctx.canvas.height;
+    let  scale = 20;
 
     ctx.beginPath();
     ctx.lineWidth = 2;
@@ -58,10 +77,10 @@ function plotSine(ctx, xOffset, yOffset) {
     // console.log("Drawing point...");
     // drawPoint(ctx, yOffset+step);
     
-    var x = 4;
-    var y = 0;
-    var amplitude = 40;
-    var frequency = 20;
+    let  x = 4;
+    let  y = 0;
+    let  amplitude = 40;
+    let  frequency = 80;
     //ctx.moveTo(x, y);
     ctx.moveTo(x, 50);
     while (x < width) {
@@ -81,9 +100,9 @@ function plotSine(ctx, xOffset, yOffset) {
 
 
 function showAxes(ctx,axes) {
-    var width = ctx.canvas.width;
-    var height = ctx.canvas.height;
-    var xMin = 0;
+    let  width = ctx.canvas.width;
+    let  height = ctx.canvas.height;
+    let  xMin = 0;
     
     ctx.beginPath();
     ctx.strokeStyle = "rgb(128,128,128)";
@@ -104,8 +123,8 @@ function showAxes(ctx,axes) {
 }
 
 function draw() {
-    var canvas = document.getElementById("canvas");
-    var context = canvas.getContext("2d");
+    let  canvas = document.getElementById("canvas");
+    let  context = canvas.getContext("2d");
 
     context.clearRect(0, 0, 500, 500);
     showAxes(context);
@@ -120,7 +139,7 @@ function draw() {
 
 // Using math to draw cool curves and shapes
 function init() {
-    window.requestAnimationFrame(draw);
+    //window.requestAnimationFrame(draw);
     spirograph();
 }
 let step = -4;
