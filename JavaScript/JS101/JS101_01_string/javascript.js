@@ -2,8 +2,8 @@
 // https://www.w3schools.com/jsref/jsref_obj_string.asp
 
 
+// String methods
 let myCar = "Opel Zafira";
-
 
 console.log("charAt:" + myCar.charAt(2));
 console.log("charCodeAt:" + myCar.charCodeAt(2));
@@ -18,19 +18,27 @@ console.log("includes Za:" + myCar.includes("Za"));
 console.log("includes za:" + myCar.includes("za"));
 
 
-for (let key in myCar) {
-    console.log(key.key);
+// Iterate over string elements
+
+/* 
+Method: 1
+Iterate over each element in string and print both index and value
+*/
+for (let ind in myCar) {
+    console.log(ind + " : " + myCar[ind]);
 }
 
+/*
+Method: 2
+*/ 
+array.forEach(element => {
+    console.log()    
+});
+
+
+
+// Print properties and methods of string type
 console.log(Object.getOwnPropertyNames(String));
-
-let strMethods = Object.getOwnPropertyNames(String);
-
-let methodNames = strMethods.__proto__;
-
-methodNames.forEach(item => console.log(item));
-
-
 
 
 // Function insertafter
@@ -38,6 +46,9 @@ function insertAfter(newNode, existingNode) {
     existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
 }
 
+
+
+// Create element and insert as HTML
 let menu = document.getElementById('menu');
 
 // create a new li node
